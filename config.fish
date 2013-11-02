@@ -9,10 +9,6 @@ set -g __fish_git_prompt_showcolorhints 1
 
 set -gx EDITOR "subl -w"
 
-# vendor stuff
-
-source ~/.config/fish/vendors.fish
-
 # rbenv
 
 if test -n "(which rbenv)"
