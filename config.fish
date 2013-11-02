@@ -1,4 +1,5 @@
 set fish_greeting ""
+
 set fish_user_paths ~/Library/Python/2.7/bin ~/.local/bin/
 
 set -g __fish_git_prompt_show_informative_status 1
@@ -12,7 +13,7 @@ set -gx EDITOR "subl -w"
 # rbenv
 
 if test -n "(which rbenv)"
-    set fish_user_paths $HOME/.rbenv/shims
+    set fish_user_paths $HOME/.rbenv/shims $fish_user_paths
     rbenv rehash >/dev/null ^&1
 end
 
