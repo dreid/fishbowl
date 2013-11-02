@@ -1,0 +1,3 @@
+[submodule "vendor/virtualfish"]
+	path = vendor/virtualfish
+	url = https://github.com/adambrenecki/virtualfish
