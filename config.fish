@@ -22,17 +22,17 @@ end
 set -g VIRTUALFISH_COMPAT_ALIASES
 source ~/.config/fish/vendor/virtualfish/virtual.fish
 
-function __vf_set_pip_use_wheel --on-event virtualenv_did_activate
+function __set_pip_use_wheel --on-event virtualenv_did_activate
     set -gx PIP_USE_WHEEL "true"
 end
 
-function __vf_set_cryptography_compiler_flags --on-event virtualenv_did_activate:cryptography
+function __set_cryptography_compiler_flags --on-event virtualenv_did_activate:cryptography
     set -gx ARCHFLAGS "-arch x86_64"
     set -gx CFLAGS "-I/usr/local/opt/openssl/include"
     set -gx LDFLAGS "-L/usr/local/opt/openssl/lib"
 end
 
-function __vf_unset_cryptography_compiler_flags --on-event virtualenv_did_deactivate:cryptography
+function __unset_cryptography_compiler_flags --on-event virtualenv_did_deactivate:cryptography
     set -e ARCHFLAGS
     set -e CFLAGS
     set -e LDFLAGS
