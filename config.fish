@@ -12,7 +12,7 @@ set -gx EDITOR "subl -w"
 
 # rbenv
 
-if test -n "(which rbenv)"
+if test -f (which rbenv)
     set fish_user_paths $HOME/.rbenv/shims $fish_user_paths
     rbenv rehash >/dev/null ^&1
 end
