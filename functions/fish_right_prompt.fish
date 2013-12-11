@@ -12,7 +12,7 @@ function fish_right_prompt --on-variable _
         end
     else
         if set -q CMD_DURATION
-            set -l clocks[1 2 3 4 5 6 7 8 9 10 11 12] 🕛 🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚
+            set -l clocks 🕧 🕐 🕑 🕒 🕓 🕔 🕕 🕖 🕗 🕘 🕙 🕚 🕛 🕜 🕝 🕞 🕟 🕠 🕡 🕢 🕣 🕤 🕥 🕦
             echo -n $clocks[(math $__cmd_duration%(count $clocks)+1)] $CMD_DURATION
         end
     end
