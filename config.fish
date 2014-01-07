@@ -1,6 +1,6 @@
 set fish_greeting ""
 
-set fish_user_paths ~/Library/Python/2.7/bin ~/.local/bin/
+set fish_user_paths ~/Library/Python/2.7/bin ~/.local/bin/ /usr/local/share/npm/bin
 
 set -g __fish_git_prompt_show_informative_status 1
 set -g __fish_git_prompt_showuntrackedfiles 1
@@ -21,6 +21,7 @@ end
 
 set -g VIRTUALFISH_COMPAT_ALIASES
 source ~/.config/fish/vendor/virtualfish/virtual.fish
+source ~/.config/fish/vendor/virtualfish/auto_activation.fish
 
 function __set_pip_use_wheel --on-event virtualenv_did_activate
     set -gx PIP_USE_WHEEL "true"
