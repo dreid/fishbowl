@@ -30,12 +30,6 @@ if test -d $GOPATH/bin
     set fish_user_paths $GOPATH/bin $fish_user_paths
 end
 
-# direnv
-
-if test -f (which direnv)
-    eval (direnv hook fish)
-end
-
 # rbenv
 
 if test -f (which rbenv)
