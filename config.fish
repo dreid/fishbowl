@@ -1,7 +1,12 @@
 set fish_greeting ""
 
+set fish_color_user 05f
+set fish_color_status f00
+
 set fish_user_paths ~/Library/Python/2.7/bin ~/.local/bin
 set fish_user_paths /usr/local/share/npm/bin $fish_user_paths
+set fish_user_paths ~/.cabal/bin $fish_user_paths
+set fish_user_paths ~/Applications/git-annex.app/Contents/MacOS $fish_user_paths
 
 set -g __fish_git_prompt_show_informative_status 1
 set -g __fish_git_prompt_showuntrackedfiles 1
@@ -14,6 +19,10 @@ set -gx GOPATH $HOME/code/go
 
 set fish_user_paths $GOPATH/bin $fish_user_paths
 
+# direnv
+
+eval (direnv hook fish)
+
 # rbenv
 
 if test -f (which rbenv)
@@ -21,11 +30,9 @@ if test -f (which rbenv)
     rbenv rehash >/dev/null ^&1
 end
 
-# dvm
+# docker
 
-if test -f (which dvm)
-    eval (dvm env)
-end
+set -x DOCKER_HOST tcp://localhost:4243
 
 # Virtualfish
 
